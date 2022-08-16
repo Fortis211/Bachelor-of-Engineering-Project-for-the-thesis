@@ -32,6 +32,7 @@ class SwapCore():
         self.vertical_dist_threshold = None
         self.max_peak_distance = 8 
         self.number_of_peaks_per_signal = 3
+        self.analysis_without_correction = False
 
         # Loaded file
         self.powermeter_df = None
@@ -162,7 +163,7 @@ class SwapCore():
                 # check if number of pause- or rather sending-state datapoints is correct allowing for max 2 errors
                 if len(check_list1) in ( ((self.number_of_peaks_per_signal-1)*3), ((self.number_of_peaks_per_signal-1)*3) +1,
                     ((self.number_of_peaks_per_signal-1)*3) -1) and len(check_list2) in ( (self.number_of_peaks_per_signal*3), 
-                    (self.number_of_peaks_per_signal*3) +1, (self.number_of_peaks_per_signal*3) -1):
+                   (self.number_of_peaks_per_signal*3) +1, (self.number_of_peaks_per_signal*3) -1):
             #optionally allow for more errors
             #, ((number_of_peaks_per_signal-1)*3)+2, ((number_of_peaks_per_signal-1)*3)-2 
             #, (number_of_peaks_per_signal*3)+2, (number_of_peaks_per_signal*3)-2 
@@ -184,7 +185,32 @@ class SwapCore():
         self.peaks = new_peaks_correct
 
         return avg_points_per_signal, expected_avg_points_per_signal
-     
+
+    def ref_analysis_without_correction(self):
+
+        '''
+        This method filters out found peaks provided by find_and_group_peaks method of this class
+        by selecting found peaks indices. Found peaks are then further analyzed in the
+        analyze_peaks method. This method does not correct found peaks in any ways other than just selecting groups of
+        set number of peaks per signal.
+        '''
+        signal_list = self.find_and_group_peaks()
+
+        # Filter for signals with the correct amount of peaks.
+        correct_signal_list = []
+        for x in signal_list:
+            if len(x) == self.number_of_peaks_per_signal:
+                correct_signal_list.append(x)
+
+        # rewriting nested list to one dimensional list
+        signal_list_1d = []
+        for signal in correct_signal_list:
+            for peak in signal:
+                signal_list_1d.append(peak)
+
+        self.peaks = signal_list_1d
+        print(f"Found signals count (including ones with signal being higher or lower than both ref signals): {len(signal_list_1d)//3}")
+       
     def analyze_peaks(self):
 
         '''
@@ -197,7 +223,10 @@ class SwapCore():
         '''
 
         if self.peaks is None:
-            self.ref_analysis()  
+            if self.analysis_without_correction == False:
+                self.ref_analysis()
+            else:
+                self.ref_analysis_without_correction()  
 
         ref1_peaks =  self.value_array[self.peaks[0::self.number_of_peaks_per_signal]]
         ref2_peaks = self.value_array[self.peaks[2::self.number_of_peaks_per_signal]]
@@ -225,17 +254,6 @@ class SwapCore():
         
          x_lim                                  -   List, tuple optional
                                                     Set the x limits of the axes for the second and third plot.
-        '''
-        '''
-        if self.peaks is None:
-            self.ref_analysis()
-
-        # ref1_peaks contains all first reference peaks
-        ref1_peaks=self.peaks[0::self.number_of_peaks_per_signal]
-        # ref2_peaks contains all second reference peaks
-        ref2_peaks=self.peaks[2::self.number_of_peaks_per_signal]
-        # data_points contains all data points peaks
-        data_points = self.peaks[1::self.number_of_peaks_per_signal]
         '''
         peaks = self.analyze_peaks()
 
@@ -266,7 +284,7 @@ class SwapCore():
         plt.show()
 
     def set_parameters(self,x_axis_norm=True, min_height_peak=1*10**(-6), horizontal_distance=1, 
-                            vertical_dist_threshold=None, max_peak_distance=8, number_of_peaks_per_signal=3):
+                            vertical_dist_threshold=None, max_peak_distance=8, number_of_peaks_per_signal=3,analysis_without_correction=False):
 
             '''
             This method allows to set parameters for the given signal, if called without arguments it will set default
@@ -293,14 +311,16 @@ class SwapCore():
             number_of_peaks_per_signal              -   integer number
                                                         the number of peaks per signal to be considered (more or rather less 
                                                         means a wrong time-gap-alignment and the signal is neglected)
+            analysis_without_correction             -   Boolean True or False, optional
+                                                        setting to True will use ref_analysis_without_correction instead of ref_analysis                                             
             '''
-
             self.x_axis_norm = x_axis_norm
             self.min_height_peak = min_height_peak
             self.horizontal_distance = horizontal_distance 
             self.vertical_dist_threshold = vertical_dist_threshold
             self.max_peak_distance = max_peak_distance 
-            self.number_of_peaks_per_signal = number_of_peaks_per_signal        
+            self.number_of_peaks_per_signal = number_of_peaks_per_signal
+            self.analysis_without_correction = analysis_without_correction      
 
     def calculate_time_interval(self):
 
