@@ -1,0 +1,1483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>SwapClass API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>SwapClass</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
+
+
+class SwapCore():
+
+    def __init__(self,path,rows_to_skip=2):
+
+        &#39;&#39;&#39;
+        Class constructor, sets default parameters.
+
+        `path` - string, required -  
+
+        .csv file name path. 
+
+        `rows_to_skip` - int, optional -
+
+         How many header lines to skip in the .csv file.
+        &#39;&#39;&#39;
+
+        self.path = path
+        self.rows_to_skip = rows_to_skip
+
+        self.value_array = None
+        self.time_array = None
+        self.peaks = None
+
+        # Parameters
+        self.x_axis_norm = True
+        self.min_height_peak = 1*10**(-6)
+        self.horizontal_distance = 1 
+        self.vertical_dist_threshold = None
+        self.max_peak_distance = 8 
+
+        self.number_of_peaks_per_signal = 3
+
+        self.analysis_without_correction = False
+
+        self.rolling_mean_signal = False
+        self.roll_strength = None
+        self.original_value_array = None
+
+        # Loaded file
+        self.powermeter_df = None
+
+    def load_file(self):
+
+        &#39;&#39;&#39;
+        This method loads .csv file into pandas data-frame and then splits data into class fields as the
+        numpy array.
+        &#39;&#39;&#39;
+
+        powermeter_df =  pd.read_csv(self.path, skiprows=self.rows_to_skip, names = [&#39;time&#39;, &#39;value&#39;],index_col=False)
+        self.value_array = np.array(powermeter_df.value)
+
+        if self.x_axis_norm == True:
+            self.time_array = np.arange(len(powermeter_df.time))
+        else:    
+            self.time_array = np.array(powermeter_df.time)    
+        
+        if self.rolling_mean_signal == True:
+            self.original_value_array = np.array(powermeter_df.value).copy()
+            self.value_array = np.array(powermeter_df[&#39;value&#39;].rolling(self.roll_strength,min_periods=1).mean())
+            self.time_array = np.arange(len(self.value_array))
+
+        self.powermeter_df = powermeter_df
+       
+    def find_and_group_peaks(self):
+
+        &#39;&#39;&#39;
+        This method is using `scipy.signal` find_peaks to find peaks that are matching given parameters
+        and then splits them into list of lists accordingly for further processing.
+        &#39;&#39;&#39;
+
+        if (self.time_array is None) or (self.value_array is None):
+            self.load_file()
+
+        # Function &#39;find_peaks&#39; from scipy.signal finds the peaks in the signal considering the given boundary conditions.
+        peaks, peak_heights = find_peaks(self.value_array, height=self.min_height_peak, 
+                                        distance=self.horizontal_distance, threshold=self.vertical_dist_threshold)
+
+        # Divide the indices of the found peaks into groups of individually sent signals.
+        signal_list, last = [[]], None
+
+        for peak in peaks:
+            if last is None or abs(last - peak) &lt;= self.max_peak_distance:
+                # [-1] refers to the last element
+                signal_list[-1].append(peak)
+            else:
+                signal_list.append([peak])
+            last = peak 
+        
+        return signal_list
+    
+    def find_peaks(self):
+
+        &#39;&#39;&#39;
+        This method returns all peaks found by `scipy.signal.find_peaks` function.
+        Could be used for debugging. 
+        &#39;&#39;&#39;
+
+        if (self.time_array is None) or (self.value_array is None):
+            self.load_file()
+
+        # Function &#39;find_peaks&#39; from scipy.signal finds the peaks in the signal considering the given boundary conditions.
+        peaks, peak_heights = find_peaks(self.value_array, height=self.min_height_peak, 
+                                        distance=self.horizontal_distance, threshold=self.vertical_dist_threshold)
+
+        print(f&#34;Found signals count (including ones with signal being higher or lower than both ref signals): {len(peaks)//3}&#34;)   
+                          
+        return peaks
+
+    def ref_analysis(self):
+
+        &#39;&#39;&#39;
+        This method filters out found peaks provided by find_and_group_peaks method of this class
+        by selecting and correcting found peaks indices. Found peaks are then further analyzed in the
+        analyze_peaks method.
+        &#39;&#39;&#39;
+
+        signal_list = self.find_and_group_peaks()
+
+        # Filter for signals with the correct amount of peaks.
+        correct_signal_list = []
+        for x in signal_list:
+            if len(x) == self.number_of_peaks_per_signal:
+                correct_signal_list.append(x)
+
+        &#34;&#34;&#34; 
+        2. Correction: Add missing datapoints to signal
+        &#34;&#34;&#34;
+        # Create list &#39;points_number_list&#39; to check the number of datapoints per signal
+        points_number_list = []
+        # Create list for the indices of correct peaks 
+        new_peaks_correct = []
+        # Create list of lists which each contain the indices of correct peaks for one single signal
+        signal_correct_peaks = []
+
+        # for each signal consisting of number_of_peaks_per_signal peaks
+        for corr_sig in correct_signal_list:
+            # a is the index of the first peak. Now check whether the 2 datapoints before should also be part of that 
+            # signal -&gt; remember that the reference peaks i.e. the first part of the signal is sent for the length of 
+            # three time-gaps
+            a = corr_sig[0] 
+            # if the value is equal or bigger than the third part of its neighbor: add as part of the signal,
+            # repeat for second neighbor
+            if self.value_array[a-1] &gt;= self.value_array[a]/3: 
+                a = a-1
+                if self.value_array[a-1] &gt;= self.value_array[a]/3:
+                    a = a-1
+            else:
+                a=corr_sig[0]
+
+            # b is the index of the last peak. Check whether the 2 following datapoints should also be part of that signal
+            # remember that the reference peaks i.e. the last part of the signal is sent for the length of three time-gaps
+            b = corr_sig[-1]
+            # if the value is equal or bigger than the third part of its neighbor: add as part of the signal,
+            # repeat for second neighbor
+            if self.value_array[b+1] &gt;= self.value_array[b]/3:
+                b = b+1
+                if (b+1)&lt;len(self.value_array):
+                    if self.value_array[b+1] &gt;= self.value_array[b]/3:
+                        b = b+1
+            else:
+                b = corr_sig[-1]
+
+            &#34;&#34;&#34;
+            3. Correction: Check if signal fulfills conditions for good time-gap alignment between sender and receiver.
+            -Check the number of datapoints per signal, only consider those where the overall time-gap of sender 
+            and receiver match. 
+            -In the next step check, whether within the signal the time-gaps match by checking that the number of 
+            datapoints in pause-state i.e. datapoints with values equal or smaller than 1/3*Min(signal peaks) 
+            (thus 1/3 of the small reference) is correct as well as the number of datapoints in sending-state i.e.
+            datapoints with values equal or bigger than 2/3*Min(signal peaks) (thus 2/3 of the small reference).
+            Here the algorithm allows for maximal two datapoints which do not match the conditions i.e. one pause-state-
+            and one sending-state datapoint.
+            &#34;&#34;&#34;
+            points_number_list.append((b-a+1))
+            # correct number of points in the overall signal
+            if (b-a+1) == (self.number_of_peaks_per_signal*3 + (self.number_of_peaks_per_signal-1)*3):
+                # array of indices of the middle datapoint of the peaks
+                peaks_correct_new = np.arange(a+1, b+1, 6)
+                # list of all datapoints in one signal 
+                checker = np.arange(a, b+1, 1)
+
+                # list of pause-state datapoints
+                check_list1 = [x for x in self.value_array[checker] if x &lt;= (2*np.min(self.value_array[peaks_correct_new])/6)]
+                
+                # list of sending-state datapoints
+                check_list2 = [x for x in self.value_array[checker] if x &gt;= (4*np.min(self.value_array[peaks_correct_new])/6)]
+
+                # check if number of pause- or rather sending-state datapoints is correct allowing for max 2 errors
+                if len(check_list1) in ( ((self.number_of_peaks_per_signal-1)*3), ((self.number_of_peaks_per_signal-1)*3) +1,
+                    ((self.number_of_peaks_per_signal-1)*3) -1) and len(check_list2) in ( (self.number_of_peaks_per_signal*3), 
+                   (self.number_of_peaks_per_signal*3) +1, (self.number_of_peaks_per_signal*3) -1):
+            #optionally allow for more errors
+            #, ((number_of_peaks_per_signal-1)*3)+2, ((number_of_peaks_per_signal-1)*3)-2 
+            #, (number_of_peaks_per_signal*3)+2, (number_of_peaks_per_signal*3)-2 
+
+                    # if the conditions are met: 
+                    # -add the indices of this signal to the signal_correct_peaks list
+                    # -add the indices of this signal to the continuous list of indices: new_peaks_correct
+                    signal_correct_peaks.append(peaks_correct_new)
+                    for peakilito in peaks_correct_new:
+                        new_peaks_correct.append(peakilito)
+        
+        # print some details of the processing in order to get an idea if the measurement is a success.
+
+        avg_points_per_signal = np.average(points_number_list)
+        expected_avg_points_per_signal = (self.number_of_peaks_per_signal*3)+ ((self.number_of_peaks_per_signal-1)*3)
+
+        print(f&#34;Average number of points per signal: {avg_points_per_signal}. Should be: {expected_avg_points_per_signal}&#34;)
+
+        self.peaks = new_peaks_correct
+
+        return avg_points_per_signal, expected_avg_points_per_signal
+
+    def ref_analysis_without_correction(self):
+
+        &#39;&#39;&#39;
+        This method filters out found peaks provided by `find_and_group_peaks` method of this class
+        by selecting found peaks indices. Found peaks are then further analyzed in the
+        `analyze_peaks` method. This method does not correct found peaks in any ways other than just selecting groups of
+        set number of peaks per signal.
+        &#39;&#39;&#39;
+        signal_list = self.find_and_group_peaks()
+
+        # Filter for signals with the correct amount of peaks.
+        correct_signal_list = []
+        for x in signal_list:
+            if len(x) == self.number_of_peaks_per_signal:
+                correct_signal_list.append(x)
+
+        # rewriting nested list to one dimensional list
+        signal_list_1d = []
+        for signal in correct_signal_list:
+            for peak in signal:
+                signal_list_1d.append(peak)
+
+        self.peaks = signal_list_1d
+        print(f&#34;Found signals count (including ones with signal being higher or lower than both ref signals): {len(signal_list_1d)//3}&#34;)
+       
+    def analyze_peaks(self):
+
+        &#39;&#39;&#39;
+        This method filters out incorrect signals, that is signals that are bigger or smaller than both
+        reference signals.
+
+        Returns pandas data-frame containing indices of the found peaks, grouped into columns.
+        The 4th column named &#39;Pd&#39; contains calculated imposition of the signals basing on the reference signals.
+
+        Used formula - Pn = [MiddleDataPoint - Min(Ref1,Ref2)] / |Ref1 - Ref2|.
+        &#39;&#39;&#39;
+
+        if self.peaks is None:
+            if self.analysis_without_correction == False:
+                self.ref_analysis()
+            if self.analysis_without_correction == True: #and self.rolling_mean_signal == False:
+                self.ref_analysis_without_correction()
+            #if self.analysis_without_correction == True and self.rolling_mean_signal == True:
+            #    self.find_peaks()     
+
+        ref1_peaks =  self.value_array[self.peaks[0::self.number_of_peaks_per_signal]]
+        ref2_peaks = self.value_array[self.peaks[2::self.number_of_peaks_per_signal]]
+        data_points = self.value_array[self.peaks[1::self.number_of_peaks_per_signal]]
+
+        ref1_peaks_index =  self.time_array[self.peaks[0::self.number_of_peaks_per_signal]]
+        ref2_peaks_index = self.time_array[self.peaks[2::self.number_of_peaks_per_signal]]
+        data_points_index = self.time_array[self.peaks[1::self.number_of_peaks_per_signal]]
+
+        a = {&#34;ref1&#34;:ref1_peaks,&#34;ref2&#34;:ref2_peaks,&#34;dataPoint&#34;:data_points,
+            &#34;ref1_index&#34;:ref1_peaks_index,&#34;ref2_index&#34;:ref2_peaks_index,&#34;dataPoint_index&#34;:data_points_index}
+ 
+        peaks_df = pd.DataFrame.from_dict(a, orient=&#39;index&#39;)
+        peaks_df = peaks_df.transpose()
+
+        # calculating signal imposition ( Pn = [MiddleDataPoint - Min(Ref1,Ref2)] / |Ref1 - Ref2| )
+        peaks_df[&#34;Pn&#34;] =(peaks_df[&#34;dataPoint&#34;] - peaks_df[[&#34;ref1&#34;,&#34;ref2&#34;]].min(axis=1)) / abs(peaks_df[&#34;ref1&#34;] - peaks_df[&#34;ref2&#34;]).dropna(how=&#39;all&#39;,axis=0)
+
+        # Condition to filter out incorrect signals 
+        condition = &#34;((dataPoint  &lt; ref1) &amp; (dataPoint &gt; ref2)) | ((dataPoint  &gt; ref1) &amp; (dataPoint &lt; ref2))&#34;
+        
+
+        #return peaks_df.query(condition)
+        return peaks_df
+
+    def plot(self,x_lim=None):
+
+        &#39;&#39;&#39;
+        This method creates 3 subplots with labeled peak markers found by `ref_analysis` or `ref_analysis_without_correction` method of this class.
+        
+         `x_lim` - List, tuple optional - Set the x limits of the axes for the second and third plot.
+        &#39;&#39;&#39;
+        peaks = self.analyze_peaks()
+
+        fig, ax = plt.subplots(3, 1, sharey=&#39;col&#39;,figsize=(20,14))
+        plt.style.use(&#39;bmh&#39;)
+
+        plt.suptitle(self.path)
+
+        if x_lim != False:
+            ax[1].set_xlim(x_lim)
+            ax[2].set_xlim(x_lim)
+        
+        for i in [0,1,2]:
+            if i != 1:
+                ax[i].plot(self.time_array, self.value_array,  label=&#39;Signal&#39;)
+            else:
+                ax[i].plot(self.time_array, self.value_array, &#39;.&#39;, label=&#39;Signal&#39;)
+            ax[i].plot(peaks.dataPoint_index, peaks.dataPoint,&#34;x&#34;, markersize=6, mew=3, label=&#39;Bit-string-datapoint&#39;,color=&#39;darkred&#39;)
+            ax[i].plot(peaks.ref1_index, peaks.ref1, &#34;x&#34;, color=&#34;slateblue&#34;, markersize=6, mew=3, label=&#39;Ref 1&#39;)
+            ax[i].plot(peaks.ref2_index, peaks.ref2, &#34;x&#34;, color=&#34;dimgray&#34;, markersize=6, mew=3, label=&#39;Ref 2&#39;)    
+            ax[i].set_xlabel(&#34;Time [a.u.]&#34;, fontsize=16)
+            ax[i].set_ylabel(&#34;Value&#34;, rotation=90, fontsize=16)
+            ax[i].legend(loc=&#34;upper right&#34;, prop={&#39;size&#39;:11}, fontsize=11)
+
+        plt.show()
+
+    def set_parameters(self,x_axis_norm=True, min_height_peak=1*10**(-6), horizontal_distance=1, 
+                            vertical_dist_threshold=None, max_peak_distance=8, number_of_peaks_per_signal=3,analysis_without_correction=True, 
+                            rolling_mean_signal=True, roll_strength=25):
+
+            &#39;&#39;&#39;
+            This method allows to set parameters for the given signal, if called without arguments it will set default
+            parameters that are also set in the class constructor.
+
+            `x_axis_norm` -  Boolean True or False -
+
+            The time value from the measurement can be optionally replaced by
+            a sequence of integers of the same length for more clarity. 
+
+            `min_height_peak`  - number or ndarray or sequence, optional -
+           Required height of peaks. Either a number, `None`, an array matching  
+           `x` or a 2-element sequence of the former. The first element is  
+           always interpreted as the  minimal and the second, if supplied, as the maximal required height. 
+
+           `horizontal_distance` - number, optional -
+
+            Required minimal horizontal distance in samples between neighboring 
+            peaks. Smaller peaks are removed first until the condition is 
+            fulfilled for all remaining peaks.
+
+            `vertical_dist_threshold` - number or ndarray or sequence, optional -
+
+            Required threshold of peaks, the vertical distance to its neighboring  samples.
+
+            `max_peak_distance` - integer number -
+
+            The maximal distance between peaks belonging to the same signal 
+            (same signal = same cycle as the DMD sends the signal in a loop).
+
+           `number_of_peaks_per_signal` - integer number -
+
+            The number of peaks per signal to be considered (more or rather less 
+            means a wrong time-gap-alignment and the signal is neglected).
+
+            `analysis_without_correction` - Boolean True or False, optional
+
+            Setting to True will use ref_analysis_without_correction instead of ref_analysis.    
+
+            `rolling_mean_signal` - Boolean True or False -
+
+            Setting to True will apply provided `roll_strength` parameter on the signal, to use it, it is necessary to also make sure
+            that  `analysis_without_correction` is set to True.
+
+            `roll_strength` - positive integer -
+
+            The amount of points to consider for signal averaging.
+
+            &#39;&#39;&#39;
+            self.x_axis_norm = x_axis_norm
+            self.min_height_peak = min_height_peak
+            self.horizontal_distance = horizontal_distance 
+            self.vertical_dist_threshold = vertical_dist_threshold
+            self.max_peak_distance = max_peak_distance 
+            self.number_of_peaks_per_signal = number_of_peaks_per_signal
+            self.analysis_without_correction = analysis_without_correction  
+            self.rolling_mean_signal = rolling_mean_signal
+            self.roll_strength = roll_strength    
+
+    def calculate_time_interval(self):
+
+        &#39;&#39;&#39;
+        This method calculates time intervals between points in the given signal and prints out
+        count of the calculated intervals, mean and std.
+        &#39;&#39;&#39;
+        sig = self.powermeter_df
+        sig[&#39;interval&#39;] = sig[&#39;time&#39;]
+        sig = sig.set_index(&#39;time&#39;).diff()
+        print(&#39;Time interval counts:&#39;)
+        print(sig.interval.value_counts())
+        mean = sig.aggregate(&#39;interval&#39;).mean()
+        std = sig.aggregate(&#39;interval&#39;).std()
+        print(f&#34;Interval mean = {mean}, std = {std}&#34;)
+
+    def compare_rolling_mean_with_original(self,x_lim=None):
+
+        &#39;&#39;&#39;
+        This method creates 2 plots with plotted original signal and averaged one for comparison purposes. Works only if 
+        `analysis_without_correction`, `rolling_mean_signal` are set to `True` and `roll_strength` is provided.
+
+        `x_lim` - List, tuple optional - 
+        
+        Set the x limits of the axes for the second plot.
+        &#39;&#39;&#39;
+
+        peaks = self.analyze_peaks()
+
+        fig, ax = plt.subplots(2, 1, sharey=&#39;col&#39;,figsize=(20,14))
+        plt.style.use(&#39;bmh&#39;)
+
+        plt.suptitle(self.path)
+
+        if x_lim != False:
+            ax[1].set_xlim(x_lim)
+
+        for i in [0,1]:
+
+            ax[i].plot(self.time_array+self.roll_strength//2, self.original_value_array,  label=&#39;Original signal&#39;,color=&#39;tan&#39;)
+            ax[i].plot(self.time_array, self.value_array,  label=&#39;Rolling mean signal&#39;)
+
+            ax[i].plot(peaks.dataPoint_index, peaks.dataPoint,&#34;x&#34;, markersize=6, mew=3, label=&#39;Bit-string-datapoint&#39;,color=&#39;darkred&#39;)
+            ax[i].plot(peaks.ref1_index, peaks.ref1, &#34;x&#34; , markersize=6, mew=3, label=&#39;Ref 1&#39;,color=&#39;slateblue&#39;)
+            ax[i].plot(peaks.ref2_index, peaks.ref2, &#34;x&#34;, markersize=6, mew=3, label=&#39;Ref 2&#39;,color=&#39;dimgray&#39;)    
+
+            ax[i].set_xlabel(&#34;Time [a.u.]&#34;, fontsize=16)
+            ax[i].set_ylabel(&#34;Value&#34;, rotation=90, fontsize=16)
+            ax[i].legend(loc=&#34;upper right&#34;, prop={&#39;size&#39;:11}, fontsize=11)</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="SwapClass.SwapCore"><code class="flex name class">
+<span>class <span class="ident">SwapCore</span></span>
+<span>(</span><span>path, rows_to_skip=2)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class constructor, sets default parameters.</p>
+<p><code>path</code> - string, required -
+</p>
+<p>.csv file name path. </p>
+<p><code>rows_to_skip</code> - int, optional -</p>
+<p>How many header lines to skip in the .csv file.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SwapCore():
+
+    def __init__(self,path,rows_to_skip=2):
+
+        &#39;&#39;&#39;
+        Class constructor, sets default parameters.
+
+        `path` - string, required -  
+
+        .csv file name path. 
+
+        `rows_to_skip` - int, optional -
+
+         How many header lines to skip in the .csv file.
+        &#39;&#39;&#39;
+
+        self.path = path
+        self.rows_to_skip = rows_to_skip
+
+        self.value_array = None
+        self.time_array = None
+        self.peaks = None
+
+        # Parameters
+        self.x_axis_norm = True
+        self.min_height_peak = 1*10**(-6)
+        self.horizontal_distance = 1 
+        self.vertical_dist_threshold = None
+        self.max_peak_distance = 8 
+
+        self.number_of_peaks_per_signal = 3
+
+        self.analysis_without_correction = False
+
+        self.rolling_mean_signal = False
+        self.roll_strength = None
+        self.original_value_array = None
+
+        # Loaded file
+        self.powermeter_df = None
+
+    def load_file(self):
+
+        &#39;&#39;&#39;
+        This method loads .csv file into pandas data-frame and then splits data into class fields as the
+        numpy array.
+        &#39;&#39;&#39;
+
+        powermeter_df =  pd.read_csv(self.path, skiprows=self.rows_to_skip, names = [&#39;time&#39;, &#39;value&#39;],index_col=False)
+        self.value_array = np.array(powermeter_df.value)
+
+        if self.x_axis_norm == True:
+            self.time_array = np.arange(len(powermeter_df.time))
+        else:    
+            self.time_array = np.array(powermeter_df.time)    
+        
+        if self.rolling_mean_signal == True:
+            self.original_value_array = np.array(powermeter_df.value).copy()
+            self.value_array = np.array(powermeter_df[&#39;value&#39;].rolling(self.roll_strength,min_periods=1).mean())
+            self.time_array = np.arange(len(self.value_array))
+
+        self.powermeter_df = powermeter_df
+       
+    def find_and_group_peaks(self):
+
+        &#39;&#39;&#39;
+        This method is using `scipy.signal` find_peaks to find peaks that are matching given parameters
+        and then splits them into list of lists accordingly for further processing.
+        &#39;&#39;&#39;
+
+        if (self.time_array is None) or (self.value_array is None):
+            self.load_file()
+
+        # Function &#39;find_peaks&#39; from scipy.signal finds the peaks in the signal considering the given boundary conditions.
+        peaks, peak_heights = find_peaks(self.value_array, height=self.min_height_peak, 
+                                        distance=self.horizontal_distance, threshold=self.vertical_dist_threshold)
+
+        # Divide the indices of the found peaks into groups of individually sent signals.
+        signal_list, last = [[]], None
+
+        for peak in peaks:
+            if last is None or abs(last - peak) &lt;= self.max_peak_distance:
+                # [-1] refers to the last element
+                signal_list[-1].append(peak)
+            else:
+                signal_list.append([peak])
+            last = peak 
+        
+        return signal_list
+    
+    def find_peaks(self):
+
+        &#39;&#39;&#39;
+        This method returns all peaks found by `scipy.signal.find_peaks` function.
+        Could be used for debugging. 
+        &#39;&#39;&#39;
+
+        if (self.time_array is None) or (self.value_array is None):
+            self.load_file()
+
+        # Function &#39;find_peaks&#39; from scipy.signal finds the peaks in the signal considering the given boundary conditions.
+        peaks, peak_heights = find_peaks(self.value_array, height=self.min_height_peak, 
+                                        distance=self.horizontal_distance, threshold=self.vertical_dist_threshold)
+
+        print(f&#34;Found signals count (including ones with signal being higher or lower than both ref signals): {len(peaks)//3}&#34;)   
+                          
+        return peaks
+
+    def ref_analysis(self):
+
+        &#39;&#39;&#39;
+        This method filters out found peaks provided by find_and_group_peaks method of this class
+        by selecting and correcting found peaks indices. Found peaks are then further analyzed in the
+        analyze_peaks method.
+        &#39;&#39;&#39;
+
+        signal_list = self.find_and_group_peaks()
+
+        # Filter for signals with the correct amount of peaks.
+        correct_signal_list = []
+        for x in signal_list:
+            if len(x) == self.number_of_peaks_per_signal:
+                correct_signal_list.append(x)
+
+        &#34;&#34;&#34; 
+        2. Correction: Add missing datapoints to signal
+        &#34;&#34;&#34;
+        # Create list &#39;points_number_list&#39; to check the number of datapoints per signal
+        points_number_list = []
+        # Create list for the indices of correct peaks 
+        new_peaks_correct = []
+        # Create list of lists which each contain the indices of correct peaks for one single signal
+        signal_correct_peaks = []
+
+        # for each signal consisting of number_of_peaks_per_signal peaks
+        for corr_sig in correct_signal_list:
+            # a is the index of the first peak. Now check whether the 2 datapoints before should also be part of that 
+            # signal -&gt; remember that the reference peaks i.e. the first part of the signal is sent for the length of 
+            # three time-gaps
+            a = corr_sig[0] 
+            # if the value is equal or bigger than the third part of its neighbor: add as part of the signal,
+            # repeat for second neighbor
+            if self.value_array[a-1] &gt;= self.value_array[a]/3: 
+                a = a-1
+                if self.value_array[a-1] &gt;= self.value_array[a]/3:
+                    a = a-1
+            else:
+                a=corr_sig[0]
+
+            # b is the index of the last peak. Check whether the 2 following datapoints should also be part of that signal
+            # remember that the reference peaks i.e. the last part of the signal is sent for the length of three time-gaps
+            b = corr_sig[-1]
+            # if the value is equal or bigger than the third part of its neighbor: add as part of the signal,
+            # repeat for second neighbor
+            if self.value_array[b+1] &gt;= self.value_array[b]/3:
+                b = b+1
+                if (b+1)&lt;len(self.value_array):
+                    if self.value_array[b+1] &gt;= self.value_array[b]/3:
+                        b = b+1
+            else:
+                b = corr_sig[-1]
+
+            &#34;&#34;&#34;
+            3. Correction: Check if signal fulfills conditions for good time-gap alignment between sender and receiver.
+            -Check the number of datapoints per signal, only consider those where the overall time-gap of sender 
+            and receiver match. 
+            -In the next step check, whether within the signal the time-gaps match by checking that the number of 
+            datapoints in pause-state i.e. datapoints with values equal or smaller than 1/3*Min(signal peaks) 
+            (thus 1/3 of the small reference) is correct as well as the number of datapoints in sending-state i.e.
+            datapoints with values equal or bigger than 2/3*Min(signal peaks) (thus 2/3 of the small reference).
+            Here the algorithm allows for maximal two datapoints which do not match the conditions i.e. one pause-state-
+            and one sending-state datapoint.
+            &#34;&#34;&#34;
+            points_number_list.append((b-a+1))
+            # correct number of points in the overall signal
+            if (b-a+1) == (self.number_of_peaks_per_signal*3 + (self.number_of_peaks_per_signal-1)*3):
+                # array of indices of the middle datapoint of the peaks
+                peaks_correct_new = np.arange(a+1, b+1, 6)
+                # list of all datapoints in one signal 
+                checker = np.arange(a, b+1, 1)
+
+                # list of pause-state datapoints
+                check_list1 = [x for x in self.value_array[checker] if x &lt;= (2*np.min(self.value_array[peaks_correct_new])/6)]
+                
+                # list of sending-state datapoints
+                check_list2 = [x for x in self.value_array[checker] if x &gt;= (4*np.min(self.value_array[peaks_correct_new])/6)]
+
+                # check if number of pause- or rather sending-state datapoints is correct allowing for max 2 errors
+                if len(check_list1) in ( ((self.number_of_peaks_per_signal-1)*3), ((self.number_of_peaks_per_signal-1)*3) +1,
+                    ((self.number_of_peaks_per_signal-1)*3) -1) and len(check_list2) in ( (self.number_of_peaks_per_signal*3), 
+                   (self.number_of_peaks_per_signal*3) +1, (self.number_of_peaks_per_signal*3) -1):
+            #optionally allow for more errors
+            #, ((number_of_peaks_per_signal-1)*3)+2, ((number_of_peaks_per_signal-1)*3)-2 
+            #, (number_of_peaks_per_signal*3)+2, (number_of_peaks_per_signal*3)-2 
+
+                    # if the conditions are met: 
+                    # -add the indices of this signal to the signal_correct_peaks list
+                    # -add the indices of this signal to the continuous list of indices: new_peaks_correct
+                    signal_correct_peaks.append(peaks_correct_new)
+                    for peakilito in peaks_correct_new:
+                        new_peaks_correct.append(peakilito)
+        
+        # print some details of the processing in order to get an idea if the measurement is a success.
+
+        avg_points_per_signal = np.average(points_number_list)
+        expected_avg_points_per_signal = (self.number_of_peaks_per_signal*3)+ ((self.number_of_peaks_per_signal-1)*3)
+
+        print(f&#34;Average number of points per signal: {avg_points_per_signal}. Should be: {expected_avg_points_per_signal}&#34;)
+
+        self.peaks = new_peaks_correct
+
+        return avg_points_per_signal, expected_avg_points_per_signal
+
+    def ref_analysis_without_correction(self):
+
+        &#39;&#39;&#39;
+        This method filters out found peaks provided by `find_and_group_peaks` method of this class
+        by selecting found peaks indices. Found peaks are then further analyzed in the
+        `analyze_peaks` method. This method does not correct found peaks in any ways other than just selecting groups of
+        set number of peaks per signal.
+        &#39;&#39;&#39;
+        signal_list = self.find_and_group_peaks()
+
+        # Filter for signals with the correct amount of peaks.
+        correct_signal_list = []
+        for x in signal_list:
+            if len(x) == self.number_of_peaks_per_signal:
+                correct_signal_list.append(x)
+
+        # rewriting nested list to one dimensional list
+        signal_list_1d = []
+        for signal in correct_signal_list:
+            for peak in signal:
+                signal_list_1d.append(peak)
+
+        self.peaks = signal_list_1d
+        print(f&#34;Found signals count (including ones with signal being higher or lower than both ref signals): {len(signal_list_1d)//3}&#34;)
+       
+    def analyze_peaks(self):
+
+        &#39;&#39;&#39;
+        This method filters out incorrect signals, that is signals that are bigger or smaller than both
+        reference signals.
+
+        Returns pandas data-frame containing indices of the found peaks, grouped into columns.
+        The 4th column named &#39;Pd&#39; contains calculated imposition of the signals basing on the reference signals.
+
+        Used formula - Pn = [MiddleDataPoint - Min(Ref1,Ref2)] / |Ref1 - Ref2|.
+        &#39;&#39;&#39;
+
+        if self.peaks is None:
+            if self.analysis_without_correction == False:
+                self.ref_analysis()
+            if self.analysis_without_correction == True: #and self.rolling_mean_signal == False:
+                self.ref_analysis_without_correction()
+            #if self.analysis_without_correction == True and self.rolling_mean_signal == True:
+            #    self.find_peaks()     
+
+        ref1_peaks =  self.value_array[self.peaks[0::self.number_of_peaks_per_signal]]
+        ref2_peaks = self.value_array[self.peaks[2::self.number_of_peaks_per_signal]]
+        data_points = self.value_array[self.peaks[1::self.number_of_peaks_per_signal]]
+
+        ref1_peaks_index =  self.time_array[self.peaks[0::self.number_of_peaks_per_signal]]
+        ref2_peaks_index = self.time_array[self.peaks[2::self.number_of_peaks_per_signal]]
+        data_points_index = self.time_array[self.peaks[1::self.number_of_peaks_per_signal]]
+
+        a = {&#34;ref1&#34;:ref1_peaks,&#34;ref2&#34;:ref2_peaks,&#34;dataPoint&#34;:data_points,
+            &#34;ref1_index&#34;:ref1_peaks_index,&#34;ref2_index&#34;:ref2_peaks_index,&#34;dataPoint_index&#34;:data_points_index}
+ 
+        peaks_df = pd.DataFrame.from_dict(a, orient=&#39;index&#39;)
+        peaks_df = peaks_df.transpose()
+
+        # calculating signal imposition ( Pn = [MiddleDataPoint - Min(Ref1,Ref2)] / |Ref1 - Ref2| )
+        peaks_df[&#34;Pn&#34;] =(peaks_df[&#34;dataPoint&#34;] - peaks_df[[&#34;ref1&#34;,&#34;ref2&#34;]].min(axis=1)) / abs(peaks_df[&#34;ref1&#34;] - peaks_df[&#34;ref2&#34;]).dropna(how=&#39;all&#39;,axis=0)
+
+        # Condition to filter out incorrect signals 
+        condition = &#34;((dataPoint  &lt; ref1) &amp; (dataPoint &gt; ref2)) | ((dataPoint  &gt; ref1) &amp; (dataPoint &lt; ref2))&#34;
+        
+
+        #return peaks_df.query(condition)
+        return peaks_df
+
+    def plot(self,x_lim=None):
+
+        &#39;&#39;&#39;
+        This method creates 3 subplots with labeled peak markers found by `ref_analysis` or `ref_analysis_without_correction` method of this class.
+        
+         `x_lim` - List, tuple optional - Set the x limits of the axes for the second and third plot.
+        &#39;&#39;&#39;
+        peaks = self.analyze_peaks()
+
+        fig, ax = plt.subplots(3, 1, sharey=&#39;col&#39;,figsize=(20,14))
+        plt.style.use(&#39;bmh&#39;)
+
+        plt.suptitle(self.path)
+
+        if x_lim != False:
+            ax[1].set_xlim(x_lim)
+            ax[2].set_xlim(x_lim)
+        
+        for i in [0,1,2]:
+            if i != 1:
+                ax[i].plot(self.time_array, self.value_array,  label=&#39;Signal&#39;)
+            else:
+                ax[i].plot(self.time_array, self.value_array, &#39;.&#39;, label=&#39;Signal&#39;)
+            ax[i].plot(peaks.dataPoint_index, peaks.dataPoint,&#34;x&#34;, markersize=6, mew=3, label=&#39;Bit-string-datapoint&#39;,color=&#39;darkred&#39;)
+            ax[i].plot(peaks.ref1_index, peaks.ref1, &#34;x&#34;, color=&#34;slateblue&#34;, markersize=6, mew=3, label=&#39;Ref 1&#39;)
+            ax[i].plot(peaks.ref2_index, peaks.ref2, &#34;x&#34;, color=&#34;dimgray&#34;, markersize=6, mew=3, label=&#39;Ref 2&#39;)    
+            ax[i].set_xlabel(&#34;Time [a.u.]&#34;, fontsize=16)
+            ax[i].set_ylabel(&#34;Value&#34;, rotation=90, fontsize=16)
+            ax[i].legend(loc=&#34;upper right&#34;, prop={&#39;size&#39;:11}, fontsize=11)
+
+        plt.show()
+
+    def set_parameters(self,x_axis_norm=True, min_height_peak=1*10**(-6), horizontal_distance=1, 
+                            vertical_dist_threshold=None, max_peak_distance=8, number_of_peaks_per_signal=3,analysis_without_correction=True, 
+                            rolling_mean_signal=True, roll_strength=25):
+
+            &#39;&#39;&#39;
+            This method allows to set parameters for the given signal, if called without arguments it will set default
+            parameters that are also set in the class constructor.
+
+            `x_axis_norm` -  Boolean True or False -
+
+            The time value from the measurement can be optionally replaced by
+            a sequence of integers of the same length for more clarity. 
+
+            `min_height_peak`  - number or ndarray or sequence, optional -
+           Required height of peaks. Either a number, `None`, an array matching  
+           `x` or a 2-element sequence of the former. The first element is  
+           always interpreted as the  minimal and the second, if supplied, as the maximal required height. 
+
+           `horizontal_distance` - number, optional -
+
+            Required minimal horizontal distance in samples between neighboring 
+            peaks. Smaller peaks are removed first until the condition is 
+            fulfilled for all remaining peaks.
+
+            `vertical_dist_threshold` - number or ndarray or sequence, optional -
+
+            Required threshold of peaks, the vertical distance to its neighboring  samples.
+
+            `max_peak_distance` - integer number -
+
+            The maximal distance between peaks belonging to the same signal 
+            (same signal = same cycle as the DMD sends the signal in a loop).
+
+           `number_of_peaks_per_signal` - integer number -
+
+            The number of peaks per signal to be considered (more or rather less 
+            means a wrong time-gap-alignment and the signal is neglected).
+
+            `analysis_without_correction` - Boolean True or False, optional
+
+            Setting to True will use ref_analysis_without_correction instead of ref_analysis.    
+
+            `rolling_mean_signal` - Boolean True or False -
+
+            Setting to True will apply provided `roll_strength` parameter on the signal, to use it, it is necessary to also make sure
+            that  `analysis_without_correction` is set to True.
+
+            `roll_strength` - positive integer -
+
+            The amount of points to consider for signal averaging.
+
+            &#39;&#39;&#39;
+            self.x_axis_norm = x_axis_norm
+            self.min_height_peak = min_height_peak
+            self.horizontal_distance = horizontal_distance 
+            self.vertical_dist_threshold = vertical_dist_threshold
+            self.max_peak_distance = max_peak_distance 
+            self.number_of_peaks_per_signal = number_of_peaks_per_signal
+            self.analysis_without_correction = analysis_without_correction  
+            self.rolling_mean_signal = rolling_mean_signal
+            self.roll_strength = roll_strength    
+
+    def calculate_time_interval(self):
+
+        &#39;&#39;&#39;
+        This method calculates time intervals between points in the given signal and prints out
+        count of the calculated intervals, mean and std.
+        &#39;&#39;&#39;
+        sig = self.powermeter_df
+        sig[&#39;interval&#39;] = sig[&#39;time&#39;]
+        sig = sig.set_index(&#39;time&#39;).diff()
+        print(&#39;Time interval counts:&#39;)
+        print(sig.interval.value_counts())
+        mean = sig.aggregate(&#39;interval&#39;).mean()
+        std = sig.aggregate(&#39;interval&#39;).std()
+        print(f&#34;Interval mean = {mean}, std = {std}&#34;)
+
+    def compare_rolling_mean_with_original(self,x_lim=None):
+
+        &#39;&#39;&#39;
+        This method creates 2 plots with plotted original signal and averaged one for comparison purposes. Works only if 
+        `analysis_without_correction`, `rolling_mean_signal` are set to `True` and `roll_strength` is provided.
+
+        `x_lim` - List, tuple optional - 
+        
+        Set the x limits of the axes for the second plot.
+        &#39;&#39;&#39;
+
+        peaks = self.analyze_peaks()
+
+        fig, ax = plt.subplots(2, 1, sharey=&#39;col&#39;,figsize=(20,14))
+        plt.style.use(&#39;bmh&#39;)
+
+        plt.suptitle(self.path)
+
+        if x_lim != False:
+            ax[1].set_xlim(x_lim)
+
+        for i in [0,1]:
+
+            ax[i].plot(self.time_array+self.roll_strength//2, self.original_value_array,  label=&#39;Original signal&#39;,color=&#39;tan&#39;)
+            ax[i].plot(self.time_array, self.value_array,  label=&#39;Rolling mean signal&#39;)
+
+            ax[i].plot(peaks.dataPoint_index, peaks.dataPoint,&#34;x&#34;, markersize=6, mew=3, label=&#39;Bit-string-datapoint&#39;,color=&#39;darkred&#39;)
+            ax[i].plot(peaks.ref1_index, peaks.ref1, &#34;x&#34; , markersize=6, mew=3, label=&#39;Ref 1&#39;,color=&#39;slateblue&#39;)
+            ax[i].plot(peaks.ref2_index, peaks.ref2, &#34;x&#34;, markersize=6, mew=3, label=&#39;Ref 2&#39;,color=&#39;dimgray&#39;)    
+
+            ax[i].set_xlabel(&#34;Time [a.u.]&#34;, fontsize=16)
+            ax[i].set_ylabel(&#34;Value&#34;, rotation=90, fontsize=16)
+            ax[i].legend(loc=&#34;upper right&#34;, prop={&#39;size&#39;:11}, fontsize=11)</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="SwapClass.SwapCore.analyze_peaks"><code class="name flex">
+<span>def <span class="ident">analyze_peaks</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method filters out incorrect signals, that is signals that are bigger or smaller than both
+reference signals.</p>
+<p>Returns pandas data-frame containing indices of the found peaks, grouped into columns.
+The 4th column named 'Pd' contains calculated imposition of the signals basing on the reference signals.</p>
+<p>Used formula - Pn = [MiddleDataPoint - Min(Ref1,Ref2)] / |Ref1 - Ref2|.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def analyze_peaks(self):
+
+    &#39;&#39;&#39;
+    This method filters out incorrect signals, that is signals that are bigger or smaller than both
+    reference signals.
+
+    Returns pandas data-frame containing indices of the found peaks, grouped into columns.
+    The 4th column named &#39;Pd&#39; contains calculated imposition of the signals basing on the reference signals.
+
+    Used formula - Pn = [MiddleDataPoint - Min(Ref1,Ref2)] / |Ref1 - Ref2|.
+    &#39;&#39;&#39;
+
+    if self.peaks is None:
+        if self.analysis_without_correction == False:
+            self.ref_analysis()
+        if self.analysis_without_correction == True: #and self.rolling_mean_signal == False:
+            self.ref_analysis_without_correction()
+        #if self.analysis_without_correction == True and self.rolling_mean_signal == True:
+        #    self.find_peaks()     
+
+    ref1_peaks =  self.value_array[self.peaks[0::self.number_of_peaks_per_signal]]
+    ref2_peaks = self.value_array[self.peaks[2::self.number_of_peaks_per_signal]]
+    data_points = self.value_array[self.peaks[1::self.number_of_peaks_per_signal]]
+
+    ref1_peaks_index =  self.time_array[self.peaks[0::self.number_of_peaks_per_signal]]
+    ref2_peaks_index = self.time_array[self.peaks[2::self.number_of_peaks_per_signal]]
+    data_points_index = self.time_array[self.peaks[1::self.number_of_peaks_per_signal]]
+
+    a = {&#34;ref1&#34;:ref1_peaks,&#34;ref2&#34;:ref2_peaks,&#34;dataPoint&#34;:data_points,
+        &#34;ref1_index&#34;:ref1_peaks_index,&#34;ref2_index&#34;:ref2_peaks_index,&#34;dataPoint_index&#34;:data_points_index}
+
+    peaks_df = pd.DataFrame.from_dict(a, orient=&#39;index&#39;)
+    peaks_df = peaks_df.transpose()
+
+    # calculating signal imposition ( Pn = [MiddleDataPoint - Min(Ref1,Ref2)] / |Ref1 - Ref2| )
+    peaks_df[&#34;Pn&#34;] =(peaks_df[&#34;dataPoint&#34;] - peaks_df[[&#34;ref1&#34;,&#34;ref2&#34;]].min(axis=1)) / abs(peaks_df[&#34;ref1&#34;] - peaks_df[&#34;ref2&#34;]).dropna(how=&#39;all&#39;,axis=0)
+
+    # Condition to filter out incorrect signals 
+    condition = &#34;((dataPoint  &lt; ref1) &amp; (dataPoint &gt; ref2)) | ((dataPoint  &gt; ref1) &amp; (dataPoint &lt; ref2))&#34;
+    
+
+    #return peaks_df.query(condition)
+    return peaks_df</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.calculate_time_interval"><code class="name flex">
+<span>def <span class="ident">calculate_time_interval</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method calculates time intervals between points in the given signal and prints out
+count of the calculated intervals, mean and std.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def calculate_time_interval(self):
+
+    &#39;&#39;&#39;
+    This method calculates time intervals between points in the given signal and prints out
+    count of the calculated intervals, mean and std.
+    &#39;&#39;&#39;
+    sig = self.powermeter_df
+    sig[&#39;interval&#39;] = sig[&#39;time&#39;]
+    sig = sig.set_index(&#39;time&#39;).diff()
+    print(&#39;Time interval counts:&#39;)
+    print(sig.interval.value_counts())
+    mean = sig.aggregate(&#39;interval&#39;).mean()
+    std = sig.aggregate(&#39;interval&#39;).std()
+    print(f&#34;Interval mean = {mean}, std = {std}&#34;)</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.compare_rolling_mean_with_original"><code class="name flex">
+<span>def <span class="ident">compare_rolling_mean_with_original</span></span>(<span>self, x_lim=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method creates 2 plots with plotted original signal and averaged one for comparison purposes. Works only if
+<code>analysis_without_correction</code>, <code>rolling_mean_signal</code> are set to <code>True</code> and <code>roll_strength</code> is provided.</p>
+<p><code>x_lim</code> - List, tuple optional - </p>
+<p>Set the x limits of the axes for the second plot.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compare_rolling_mean_with_original(self,x_lim=None):
+
+    &#39;&#39;&#39;
+    This method creates 2 plots with plotted original signal and averaged one for comparison purposes. Works only if 
+    `analysis_without_correction`, `rolling_mean_signal` are set to `True` and `roll_strength` is provided.
+
+    `x_lim` - List, tuple optional - 
+    
+    Set the x limits of the axes for the second plot.
+    &#39;&#39;&#39;
+
+    peaks = self.analyze_peaks()
+
+    fig, ax = plt.subplots(2, 1, sharey=&#39;col&#39;,figsize=(20,14))
+    plt.style.use(&#39;bmh&#39;)
+
+    plt.suptitle(self.path)
+
+    if x_lim != False:
+        ax[1].set_xlim(x_lim)
+
+    for i in [0,1]:
+
+        ax[i].plot(self.time_array+self.roll_strength//2, self.original_value_array,  label=&#39;Original signal&#39;,color=&#39;tan&#39;)
+        ax[i].plot(self.time_array, self.value_array,  label=&#39;Rolling mean signal&#39;)
+
+        ax[i].plot(peaks.dataPoint_index, peaks.dataPoint,&#34;x&#34;, markersize=6, mew=3, label=&#39;Bit-string-datapoint&#39;,color=&#39;darkred&#39;)
+        ax[i].plot(peaks.ref1_index, peaks.ref1, &#34;x&#34; , markersize=6, mew=3, label=&#39;Ref 1&#39;,color=&#39;slateblue&#39;)
+        ax[i].plot(peaks.ref2_index, peaks.ref2, &#34;x&#34;, markersize=6, mew=3, label=&#39;Ref 2&#39;,color=&#39;dimgray&#39;)    
+
+        ax[i].set_xlabel(&#34;Time [a.u.]&#34;, fontsize=16)
+        ax[i].set_ylabel(&#34;Value&#34;, rotation=90, fontsize=16)
+        ax[i].legend(loc=&#34;upper right&#34;, prop={&#39;size&#39;:11}, fontsize=11)</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.find_and_group_peaks"><code class="name flex">
+<span>def <span class="ident">find_and_group_peaks</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method is using <code>scipy.signal</code> find_peaks to find peaks that are matching given parameters
+and then splits them into list of lists accordingly for further processing.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_and_group_peaks(self):
+
+    &#39;&#39;&#39;
+    This method is using `scipy.signal` find_peaks to find peaks that are matching given parameters
+    and then splits them into list of lists accordingly for further processing.
+    &#39;&#39;&#39;
+
+    if (self.time_array is None) or (self.value_array is None):
+        self.load_file()
+
+    # Function &#39;find_peaks&#39; from scipy.signal finds the peaks in the signal considering the given boundary conditions.
+    peaks, peak_heights = find_peaks(self.value_array, height=self.min_height_peak, 
+                                    distance=self.horizontal_distance, threshold=self.vertical_dist_threshold)
+
+    # Divide the indices of the found peaks into groups of individually sent signals.
+    signal_list, last = [[]], None
+
+    for peak in peaks:
+        if last is None or abs(last - peak) &lt;= self.max_peak_distance:
+            # [-1] refers to the last element
+            signal_list[-1].append(peak)
+        else:
+            signal_list.append([peak])
+        last = peak 
+    
+    return signal_list</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.find_peaks"><code class="name flex">
+<span>def <span class="ident">find_peaks</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method returns all peaks found by <code>scipy.signal.find_peaks</code> function.
+Could be used for debugging.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def find_peaks(self):
+
+    &#39;&#39;&#39;
+    This method returns all peaks found by `scipy.signal.find_peaks` function.
+    Could be used for debugging. 
+    &#39;&#39;&#39;
+
+    if (self.time_array is None) or (self.value_array is None):
+        self.load_file()
+
+    # Function &#39;find_peaks&#39; from scipy.signal finds the peaks in the signal considering the given boundary conditions.
+    peaks, peak_heights = find_peaks(self.value_array, height=self.min_height_peak, 
+                                    distance=self.horizontal_distance, threshold=self.vertical_dist_threshold)
+
+    print(f&#34;Found signals count (including ones with signal being higher or lower than both ref signals): {len(peaks)//3}&#34;)   
+                      
+    return peaks</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.load_file"><code class="name flex">
+<span>def <span class="ident">load_file</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method loads .csv file into pandas data-frame and then splits data into class fields as the
+numpy array.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def load_file(self):
+
+    &#39;&#39;&#39;
+    This method loads .csv file into pandas data-frame and then splits data into class fields as the
+    numpy array.
+    &#39;&#39;&#39;
+
+    powermeter_df =  pd.read_csv(self.path, skiprows=self.rows_to_skip, names = [&#39;time&#39;, &#39;value&#39;],index_col=False)
+    self.value_array = np.array(powermeter_df.value)
+
+    if self.x_axis_norm == True:
+        self.time_array = np.arange(len(powermeter_df.time))
+    else:    
+        self.time_array = np.array(powermeter_df.time)    
+    
+    if self.rolling_mean_signal == True:
+        self.original_value_array = np.array(powermeter_df.value).copy()
+        self.value_array = np.array(powermeter_df[&#39;value&#39;].rolling(self.roll_strength,min_periods=1).mean())
+        self.time_array = np.arange(len(self.value_array))
+
+    self.powermeter_df = powermeter_df</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.plot"><code class="name flex">
+<span>def <span class="ident">plot</span></span>(<span>self, x_lim=None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method creates 3 subplots with labeled peak markers found by <code>ref_analysis</code> or <code>ref_analysis_without_correction</code> method of this class.</p>
+<p><code>x_lim</code> - List, tuple optional - Set the x limits of the axes for the second and third plot.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def plot(self,x_lim=None):
+
+    &#39;&#39;&#39;
+    This method creates 3 subplots with labeled peak markers found by `ref_analysis` or `ref_analysis_without_correction` method of this class.
+    
+     `x_lim` - List, tuple optional - Set the x limits of the axes for the second and third plot.
+    &#39;&#39;&#39;
+    peaks = self.analyze_peaks()
+
+    fig, ax = plt.subplots(3, 1, sharey=&#39;col&#39;,figsize=(20,14))
+    plt.style.use(&#39;bmh&#39;)
+
+    plt.suptitle(self.path)
+
+    if x_lim != False:
+        ax[1].set_xlim(x_lim)
+        ax[2].set_xlim(x_lim)
+    
+    for i in [0,1,2]:
+        if i != 1:
+            ax[i].plot(self.time_array, self.value_array,  label=&#39;Signal&#39;)
+        else:
+            ax[i].plot(self.time_array, self.value_array, &#39;.&#39;, label=&#39;Signal&#39;)
+        ax[i].plot(peaks.dataPoint_index, peaks.dataPoint,&#34;x&#34;, markersize=6, mew=3, label=&#39;Bit-string-datapoint&#39;,color=&#39;darkred&#39;)
+        ax[i].plot(peaks.ref1_index, peaks.ref1, &#34;x&#34;, color=&#34;slateblue&#34;, markersize=6, mew=3, label=&#39;Ref 1&#39;)
+        ax[i].plot(peaks.ref2_index, peaks.ref2, &#34;x&#34;, color=&#34;dimgray&#34;, markersize=6, mew=3, label=&#39;Ref 2&#39;)    
+        ax[i].set_xlabel(&#34;Time [a.u.]&#34;, fontsize=16)
+        ax[i].set_ylabel(&#34;Value&#34;, rotation=90, fontsize=16)
+        ax[i].legend(loc=&#34;upper right&#34;, prop={&#39;size&#39;:11}, fontsize=11)
+
+    plt.show()</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.ref_analysis"><code class="name flex">
+<span>def <span class="ident">ref_analysis</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method filters out found peaks provided by find_and_group_peaks method of this class
+by selecting and correcting found peaks indices. Found peaks are then further analyzed in the
+analyze_peaks method.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ref_analysis(self):
+
+    &#39;&#39;&#39;
+    This method filters out found peaks provided by find_and_group_peaks method of this class
+    by selecting and correcting found peaks indices. Found peaks are then further analyzed in the
+    analyze_peaks method.
+    &#39;&#39;&#39;
+
+    signal_list = self.find_and_group_peaks()
+
+    # Filter for signals with the correct amount of peaks.
+    correct_signal_list = []
+    for x in signal_list:
+        if len(x) == self.number_of_peaks_per_signal:
+            correct_signal_list.append(x)
+
+    &#34;&#34;&#34; 
+    2. Correction: Add missing datapoints to signal
+    &#34;&#34;&#34;
+    # Create list &#39;points_number_list&#39; to check the number of datapoints per signal
+    points_number_list = []
+    # Create list for the indices of correct peaks 
+    new_peaks_correct = []
+    # Create list of lists which each contain the indices of correct peaks for one single signal
+    signal_correct_peaks = []
+
+    # for each signal consisting of number_of_peaks_per_signal peaks
+    for corr_sig in correct_signal_list:
+        # a is the index of the first peak. Now check whether the 2 datapoints before should also be part of that 
+        # signal -&gt; remember that the reference peaks i.e. the first part of the signal is sent for the length of 
+        # three time-gaps
+        a = corr_sig[0] 
+        # if the value is equal or bigger than the third part of its neighbor: add as part of the signal,
+        # repeat for second neighbor
+        if self.value_array[a-1] &gt;= self.value_array[a]/3: 
+            a = a-1
+            if self.value_array[a-1] &gt;= self.value_array[a]/3:
+                a = a-1
+        else:
+            a=corr_sig[0]
+
+        # b is the index of the last peak. Check whether the 2 following datapoints should also be part of that signal
+        # remember that the reference peaks i.e. the last part of the signal is sent for the length of three time-gaps
+        b = corr_sig[-1]
+        # if the value is equal or bigger than the third part of its neighbor: add as part of the signal,
+        # repeat for second neighbor
+        if self.value_array[b+1] &gt;= self.value_array[b]/3:
+            b = b+1
+            if (b+1)&lt;len(self.value_array):
+                if self.value_array[b+1] &gt;= self.value_array[b]/3:
+                    b = b+1
+        else:
+            b = corr_sig[-1]
+
+        &#34;&#34;&#34;
+        3. Correction: Check if signal fulfills conditions for good time-gap alignment between sender and receiver.
+        -Check the number of datapoints per signal, only consider those where the overall time-gap of sender 
+        and receiver match. 
+        -In the next step check, whether within the signal the time-gaps match by checking that the number of 
+        datapoints in pause-state i.e. datapoints with values equal or smaller than 1/3*Min(signal peaks) 
+        (thus 1/3 of the small reference) is correct as well as the number of datapoints in sending-state i.e.
+        datapoints with values equal or bigger than 2/3*Min(signal peaks) (thus 2/3 of the small reference).
+        Here the algorithm allows for maximal two datapoints which do not match the conditions i.e. one pause-state-
+        and one sending-state datapoint.
+        &#34;&#34;&#34;
+        points_number_list.append((b-a+1))
+        # correct number of points in the overall signal
+        if (b-a+1) == (self.number_of_peaks_per_signal*3 + (self.number_of_peaks_per_signal-1)*3):
+            # array of indices of the middle datapoint of the peaks
+            peaks_correct_new = np.arange(a+1, b+1, 6)
+            # list of all datapoints in one signal 
+            checker = np.arange(a, b+1, 1)
+
+            # list of pause-state datapoints
+            check_list1 = [x for x in self.value_array[checker] if x &lt;= (2*np.min(self.value_array[peaks_correct_new])/6)]
+            
+            # list of sending-state datapoints
+            check_list2 = [x for x in self.value_array[checker] if x &gt;= (4*np.min(self.value_array[peaks_correct_new])/6)]
+
+            # check if number of pause- or rather sending-state datapoints is correct allowing for max 2 errors
+            if len(check_list1) in ( ((self.number_of_peaks_per_signal-1)*3), ((self.number_of_peaks_per_signal-1)*3) +1,
+                ((self.number_of_peaks_per_signal-1)*3) -1) and len(check_list2) in ( (self.number_of_peaks_per_signal*3), 
+               (self.number_of_peaks_per_signal*3) +1, (self.number_of_peaks_per_signal*3) -1):
+        #optionally allow for more errors
+        #, ((number_of_peaks_per_signal-1)*3)+2, ((number_of_peaks_per_signal-1)*3)-2 
+        #, (number_of_peaks_per_signal*3)+2, (number_of_peaks_per_signal*3)-2 
+
+                # if the conditions are met: 
+                # -add the indices of this signal to the signal_correct_peaks list
+                # -add the indices of this signal to the continuous list of indices: new_peaks_correct
+                signal_correct_peaks.append(peaks_correct_new)
+                for peakilito in peaks_correct_new:
+                    new_peaks_correct.append(peakilito)
+    
+    # print some details of the processing in order to get an idea if the measurement is a success.
+
+    avg_points_per_signal = np.average(points_number_list)
+    expected_avg_points_per_signal = (self.number_of_peaks_per_signal*3)+ ((self.number_of_peaks_per_signal-1)*3)
+
+    print(f&#34;Average number of points per signal: {avg_points_per_signal}. Should be: {expected_avg_points_per_signal}&#34;)
+
+    self.peaks = new_peaks_correct
+
+    return avg_points_per_signal, expected_avg_points_per_signal</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.ref_analysis_without_correction"><code class="name flex">
+<span>def <span class="ident">ref_analysis_without_correction</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method filters out found peaks provided by <code>find_and_group_peaks</code> method of this class
+by selecting found peaks indices. Found peaks are then further analyzed in the
+<code>analyze_peaks</code> method. This method does not correct found peaks in any ways other than just selecting groups of
+set number of peaks per signal.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def ref_analysis_without_correction(self):
+
+    &#39;&#39;&#39;
+    This method filters out found peaks provided by `find_and_group_peaks` method of this class
+    by selecting found peaks indices. Found peaks are then further analyzed in the
+    `analyze_peaks` method. This method does not correct found peaks in any ways other than just selecting groups of
+    set number of peaks per signal.
+    &#39;&#39;&#39;
+    signal_list = self.find_and_group_peaks()
+
+    # Filter for signals with the correct amount of peaks.
+    correct_signal_list = []
+    for x in signal_list:
+        if len(x) == self.number_of_peaks_per_signal:
+            correct_signal_list.append(x)
+
+    # rewriting nested list to one dimensional list
+    signal_list_1d = []
+    for signal in correct_signal_list:
+        for peak in signal:
+            signal_list_1d.append(peak)
+
+    self.peaks = signal_list_1d
+    print(f&#34;Found signals count (including ones with signal being higher or lower than both ref signals): {len(signal_list_1d)//3}&#34;)</code></pre>
+</details>
+</dd>
+<dt id="SwapClass.SwapCore.set_parameters"><code class="name flex">
+<span>def <span class="ident">set_parameters</span></span>(<span>self, x_axis_norm=True, min_height_peak=1e-06, horizontal_distance=1, vertical_dist_threshold=None, max_peak_distance=8, number_of_peaks_per_signal=3, analysis_without_correction=True, rolling_mean_signal=True, roll_strength=25)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>This method allows to set parameters for the given signal, if called without arguments it will set default
+parameters that are also set in the class constructor.</p>
+<p><code>x_axis_norm</code> -
+Boolean True or False -</p>
+<p>The time value from the measurement can be optionally replaced by
+a sequence of integers of the same length for more clarity. </p>
+<p><code>min_height_peak</code>
+- number or ndarray or sequence, optional -
+Required height of peaks. Either a number, <code>None</code>, an array matching<br>
+<code>x</code> or a 2-element sequence of the former. The first element is<br>
+always interpreted as the
+minimal and the second, if supplied, as the maximal required height. </p>
+<p><code>horizontal_distance</code> - number, optional -</p>
+<p>Required minimal horizontal distance in samples between neighboring
+peaks. Smaller peaks are removed first until the condition is
+fulfilled for all remaining peaks.</p>
+<p><code>vertical_dist_threshold</code> - number or ndarray or sequence, optional -</p>
+<p>Required threshold of peaks, the vertical distance to its neighboring
+samples.</p>
+<p><code>max_peak_distance</code> - integer number -</p>
+<p>The maximal distance between peaks belonging to the same signal
+(same signal = same cycle as the DMD sends the signal in a loop).</p>
+<p><code>number_of_peaks_per_signal</code> - integer number -</p>
+<p>The number of peaks per signal to be considered (more or rather less
+means a wrong time-gap-alignment and the signal is neglected).</p>
+<p><code>analysis_without_correction</code> - Boolean True or False, optional</p>
+<p>Setting to True will use ref_analysis_without_correction instead of ref_analysis.
+</p>
+<p><code>rolling_mean_signal</code> - Boolean True or False -</p>
+<p>Setting to True will apply provided <code>roll_strength</code> parameter on the signal, to use it, it is necessary to also make sure
+that
+<code>analysis_without_correction</code> is set to True.</p>
+<p><code>roll_strength</code> - positive integer -</p>
+<p>The amount of points to consider for signal averaging.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_parameters(self,x_axis_norm=True, min_height_peak=1*10**(-6), horizontal_distance=1, 
+                        vertical_dist_threshold=None, max_peak_distance=8, number_of_peaks_per_signal=3,analysis_without_correction=True, 
+                        rolling_mean_signal=True, roll_strength=25):
+
+        &#39;&#39;&#39;
+        This method allows to set parameters for the given signal, if called without arguments it will set default
+        parameters that are also set in the class constructor.
+
+        `x_axis_norm` -  Boolean True or False -
+
+        The time value from the measurement can be optionally replaced by
+        a sequence of integers of the same length for more clarity. 
+
+        `min_height_peak`  - number or ndarray or sequence, optional -
+       Required height of peaks. Either a number, `None`, an array matching  
+       `x` or a 2-element sequence of the former. The first element is  
+       always interpreted as the  minimal and the second, if supplied, as the maximal required height. 
+
+       `horizontal_distance` - number, optional -
+
+        Required minimal horizontal distance in samples between neighboring 
+        peaks. Smaller peaks are removed first until the condition is 
+        fulfilled for all remaining peaks.
+
+        `vertical_dist_threshold` - number or ndarray or sequence, optional -
+
+        Required threshold of peaks, the vertical distance to its neighboring  samples.
+
+        `max_peak_distance` - integer number -
+
+        The maximal distance between peaks belonging to the same signal 
+        (same signal = same cycle as the DMD sends the signal in a loop).
+
+       `number_of_peaks_per_signal` - integer number -
+
+        The number of peaks per signal to be considered (more or rather less 
+        means a wrong time-gap-alignment and the signal is neglected).
+
+        `analysis_without_correction` - Boolean True or False, optional
+
+        Setting to True will use ref_analysis_without_correction instead of ref_analysis.    
+
+        `rolling_mean_signal` - Boolean True or False -
+
+        Setting to True will apply provided `roll_strength` parameter on the signal, to use it, it is necessary to also make sure
+        that  `analysis_without_correction` is set to True.
+
+        `roll_strength` - positive integer -
+
+        The amount of points to consider for signal averaging.
+
+        &#39;&#39;&#39;
+        self.x_axis_norm = x_axis_norm
+        self.min_height_peak = min_height_peak
+        self.horizontal_distance = horizontal_distance 
+        self.vertical_dist_threshold = vertical_dist_threshold
+        self.max_peak_distance = max_peak_distance 
+        self.number_of_peaks_per_signal = number_of_peaks_per_signal
+        self.analysis_without_correction = analysis_without_correction  
+        self.rolling_mean_signal = rolling_mean_signal
+        self.roll_strength = roll_strength    </code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="SwapClass.SwapCore" href="#SwapClass.SwapCore">SwapCore</a></code></h4>
+<ul class="">
+<li><code><a title="SwapClass.SwapCore.analyze_peaks" href="#SwapClass.SwapCore.analyze_peaks">analyze_peaks</a></code></li>
+<li><code><a title="SwapClass.SwapCore.calculate_time_interval" href="#SwapClass.SwapCore.calculate_time_interval">calculate_time_interval</a></code></li>
+<li><code><a title="SwapClass.SwapCore.compare_rolling_mean_with_original" href="#SwapClass.SwapCore.compare_rolling_mean_with_original">compare_rolling_mean_with_original</a></code></li>
+<li><code><a title="SwapClass.SwapCore.find_and_group_peaks" href="#SwapClass.SwapCore.find_and_group_peaks">find_and_group_peaks</a></code></li>
+<li><code><a title="SwapClass.SwapCore.find_peaks" href="#SwapClass.SwapCore.find_peaks">find_peaks</a></code></li>
+<li><code><a title="SwapClass.SwapCore.load_file" href="#SwapClass.SwapCore.load_file">load_file</a></code></li>
+<li><code><a title="SwapClass.SwapCore.plot" href="#SwapClass.SwapCore.plot">plot</a></code></li>
+<li><code><a title="SwapClass.SwapCore.ref_analysis" href="#SwapClass.SwapCore.ref_analysis">ref_analysis</a></code></li>
+<li><code><a title="SwapClass.SwapCore.ref_analysis_without_correction" href="#SwapClass.SwapCore.ref_analysis_without_correction">ref_analysis_without_correction</a></code></li>
+<li><code><a title="SwapClass.SwapCore.set_parameters" href="#SwapClass.SwapCore.set_parameters">set_parameters</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
